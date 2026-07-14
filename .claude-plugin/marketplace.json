@@ -1,0 +1,14 @@
+{
+  "name": "vibe-guardian",
+  "owner": {
+    "name": "wbw20000"
+  },
+  "description": "Security plugins for vibe coding — catch vulnerabilities in AI-generated code before they ship.",
+  "plugins": [
+    {
+      "name": "vibe-guardian",
+      "source": "./",
+      "description": "Pre-commit security gate for vibe coding: blocks hardcoded secrets, SQL/XSS injection, and Supabase misconfigurations the moment AI writes them. 100% local static rules, no LLM calls."
+    }
+  ]
+}
