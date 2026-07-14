@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15">
+  <style>
+    .line { opacity: 0; animation: 14s linear infinite; }
+    .l1 { animation-name: k1; } .l2 { animation-name: k2; } .l3 { animation-name: k3; }
+    .l4 { animation-name: k4; } .l5 { animation-name: k5; } .l6 { animation-name: k6; }
+    .l7 { animation-name: k7; } .l8 { animation-name: k8; } .l9 { animation-name: k9; }
+    .l10 { animation-name: k10; }
+    @keyframes k1  { 0%,3%  { opacity:0 } 4%,93%  { opacity:1 } 97%,100% { opacity:0 } }
+    @keyframes k2  { 0%,11% { opacity:0 } 12%,93% { opacity:1 } 97%,100% { opacity:0 } }
+    @keyframes k3  { 0%,16% { opacity:0 } 17%,93% { opacity:1 } 97%,100% { opacity:0 } }
+    @keyframes k4  { 0%,21% { opacity:0 } 22%,93% { opacity:1 } 97%,100% { opacity:0 } }
+    @keyframes k5  { 0%,26% { opacity:0 } 27%,93% { opacity:1 } 97%,100% { opacity:0 } }
+    @keyframes k6  { 0%,33% { opacity:0 } 34%,93% { opacity:1 } 97%,100% { opacity:0 } }
+    @keyframes k7  { 0%,44% { opacity:0 } 45%,93% { opacity:1 } 97%,100% { opacity:0 } }
+    @keyframes k8  { 0%,53% { opacity:0 } 54%,93% { opacity:1 } 97%,100% { opacity:0 } }
+    @keyframes k9  { 0%,58% { opacity:0 } 59%,93% { opacity:1 } 97%,100% { opacity:0 } }
+    @keyframes k10 { 0%,63% { opacity:0 } 64%,93% { opacity:1 } 97%,100% { opacity:0 } }
+    .caret { animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 0%,49% { opacity:1 } 50%,100% { opacity:0 } }
+  </style>
+
+  <!-- terminal window -->
+  <rect width="800" height="440" rx="10" fill="#0d1117"/>
+  <rect width="800" height="36" rx="10" fill="#161b22"/>
+  <rect y="18" width="800" height="18" fill="#161b22"/>
+  <circle cx="22" cy="18" r="6" fill="#ff5f57"/>
+  <circle cx="42" cy="18" r="6" fill="#febc2e"/>
+  <circle cx="62" cy="18" r="6" fill="#28c840"/>
+  <text x="400" y="23" text-anchor="middle" fill="#8b949e" font-size="12">vibe-guardian — pre-commit security gate</text>
+
+  <!-- $ npx vibe-guardian scan -->
+  <text class="line l1" x="24" y="72"><tspan fill="#3fb950">$</tspan><tspan fill="#c9d1d9" dx="8">npx vibe-guardian scan</tspan></text>
+
+  <!-- finding 1 -->
+  <text class="line l2" x="24" y="106"><tspan fill="#f85149" font-weight="bold">✖ ERROR</tspan><tspan fill="#c9d1d9" dx="8">api.js:1</tspan><tspan fill="#8b949e" dx="8">[secret-openai-key]</tspan></text>
+  <text class="line l2" x="24" y="128" fill="#c9d1d9">        Hardcoded OpenAI API key</text>
+  <text class="line l3" x="24" y="150" fill="#8b949e">        &gt; const key = "sk-proj-a1b2c3d4e5f6…"</text>
+
+  <!-- finding 2 -->
+  <text class="line l4" x="24" y="184"><tspan fill="#f85149" font-weight="bold">✖ ERROR</tspan><tspan fill="#c9d1d9" dx="8">db.js:7</tspan><tspan fill="#8b949e" dx="8">[sqli-template-literal]</tspan></text>
+  <text class="line l4" x="24" y="206" fill="#c9d1d9">        SQL built with template-string interpolation → use parameterized queries</text>
+  <text class="line l5" x="24" y="228" fill="#8b949e">        &gt; db.query(`SELECT * FROM users WHERE id=${req.params.id}`)</text>
+
+  <!-- summary -->
+  <text class="line l6" x="24" y="266"><tspan fill="#c9d1d9">Vibe Guardian:</tspan><tspan fill="#f85149" dx="8">2 error(s)</tspan><tspan fill="#c9d1d9">,</tspan><tspan fill="#d29922" dx="8">1 warning(s)</tspan></text>
+
+  <!-- git commit attempt -->
+  <text class="line l7" x="24" y="312"><tspan fill="#3fb950">$</tspan><tspan fill="#c9d1d9" dx="8">git commit -m "ship it"</tspan></text>
+  <text class="line l8" x="24" y="346" fill="#f85149" font-weight="bold">✖ Commit blocked by Vibe Guardian</text>
+  <text class="line l9" x="24" y="372" fill="#8b949e">Fix the issues above — your keys never reach the repo.</text>
+
+  <!-- prompt + caret -->
+  <text class="line l10" x="24" y="410"><tspan fill="#3fb950">$</tspan><tspan class="caret" fill="#c9d1d9" dx="8">▌</tspan></text>
+</svg>

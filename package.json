@@ -1,7 +1,7 @@
 {
   "name": "vibe-guardian",
-  "version": "0.1.0",
-  "description": "Pre-commit security gate for vibe coding — blocks hardcoded secrets, SQL/XSS injection, and Supabase misconfigurations in AI-generated code. 100% local static rules, no LLM calls.",
+  "version": "0.1.1",
+  "description": "Pre-commit security gate for vibe coding — blocks hardcoded API keys, SQL injection, XSS, and Supabase RLS misconfigurations in AI-generated code (Cursor / Claude Code / Lovable). 100% local static rules, no LLM calls, zero dependencies.",
   "license": "MIT",
   "author": "clarakwang",
   "repository": {
@@ -28,9 +28,22 @@
     "pre-commit",
     "git-hooks",
     "claude-code",
+    "claude-code-plugin",
     "cursor",
+    "lovable",
     "secrets-detection",
-    "sast"
+    "secret-scanning",
+    "hardcoded-secrets",
+    "api-key-leak",
+    "sql-injection",
+    "xss",
+    "supabase",
+    "rls",
+    "ai-code-security",
+    "ai-generated-code",
+    "static-analysis",
+    "sast",
+    "security-scanner"
   ],
   "files": [
     "bin/",
