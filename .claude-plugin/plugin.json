@@ -1,0 +1,10 @@
+{
+  "name": "vibe-guardian",
+  "version": "0.1.0",
+  "description": "Pre-commit security gate for vibe coding: blocks hardcoded secrets, SQL/XSS injection, and Supabase misconfigurations the moment AI writes them. 100% local static rules, no LLM calls.",
+  "author": {
+    "name": "Clark Wang"
+  },
+  "keywords": ["security", "vibe-coding", "pre-commit", "secrets", "supabase"],
+  "hooks": "./hooks/hooks.json"
+}

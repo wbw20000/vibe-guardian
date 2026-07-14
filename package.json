@@ -1,0 +1,32 @@
+{
+  "name": "vibe-guardian",
+  "version": "0.1.0",
+  "description": "Pre-commit security gate for vibe coding — blocks hardcoded secrets, SQL/XSS injection, and Supabase misconfigurations in AI-generated code. 100% local static rules, no LLM calls.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "vibe-guardian": "bin/vibe-guardian.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test \"tests/*.test.js\""
+  },
+  "keywords": [
+    "vibe-coding",
+    "security",
+    "pre-commit",
+    "git-hooks",
+    "claude-code",
+    "cursor",
+    "secrets-detection",
+    "sast"
+  ],
+  "files": [
+    "bin/",
+    "src/",
+    "hooks/",
+    ".claude-plugin/"
+  ]
+}
