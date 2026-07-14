@@ -1,5 +1,19 @@
 # Vibe Guardian 🛡️
 
+> Pre-commit security gate for vibe coding — catches common vulnerabilities in AI-generated code **before** they reach a commit. Hardcoded secrets, SQL/XSS injection, exposed Supabase service_role keys, missing RLS.
+> **100% local static rules. No LLM calls. Zero dependencies. Millisecond scans.**
+
+```bash
+npx vibe-guardian scan            # scan your project
+npx vibe-guardian install-hook    # install the git pre-commit gate
+```
+
+Claude Code plugin: `/plugin marketplace add wbw20000/vibe-guardian` → `/plugin install vibe-guardian@vibe-guardian` — then every file Claude writes gets scanned instantly, and Claude fixes issues on the spot.
+
+False positive? Add a `// vibe-guardian: ignore` comment on (or above) the line.
+
+---
+
 > Vibe coding 的预提交安全门禁 — 在代码提交前拦截 AI 生成代码中的常见漏洞。
 > **100% 本地静态规则，不调用任何 LLM，零依赖，毫秒级扫描。**
 

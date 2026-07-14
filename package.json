@@ -3,6 +3,15 @@
   "version": "0.1.0",
   "description": "Pre-commit security gate for vibe coding — blocks hardcoded secrets, SQL/XSS injection, and Supabase misconfigurations in AI-generated code. 100% local static rules, no LLM calls.",
   "license": "MIT",
+  "author": "clarakwang",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wbw20000/vibe-guardian.git"
+  },
+  "homepage": "https://github.com/wbw20000/vibe-guardian#readme",
+  "bugs": {
+    "url": "https://github.com/wbw20000/vibe-guardian/issues"
+  },
   "type": "module",
   "bin": {
     "vibe-guardian": "bin/vibe-guardian.js"
